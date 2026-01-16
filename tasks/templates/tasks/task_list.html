@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+	{% include 'globals/head.html' %}
+	<body>
+		{% include 'globals/header.html' %}
+		<main class='container'>
+			<!-- Formularz dodawania zadania -->
+			<div class="task-input-container">
+				<form method='post'>
+					<input type="text" placeholder="Enter new task" id="taskInput">
+					<button type='submit' id="addTaskBtn">Add</button>
+				</form>
+			</div>
+
+			<!-- Lista zadań -->
+			<div class="task-list" id="taskList">
+				{% for task in object_list %}
+					{% include 'globals/task_list_element.html' %}
+				{% endfor %}
+			</div>
+		</main>
+		{% include 'globals/footer.html' %}
+	</body>
+</html>

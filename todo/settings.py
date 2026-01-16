@@ -124,7 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = "stf/"
-STATIC_ROOT = "stf"
+# STATIC_ROOT = "stf"
+STATICFILES_DIRS = [
+    BASE_DIR / 'stf'
+]
 
 PUBLIC_MEDIA_LOCATION = "media"
 MEDIA_URL = f"/{PUBLIC_MEDIA_LOCATION}/"

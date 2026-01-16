@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+	{% include 'globals/head.html' %}
+	<body>
+		{% include 'globals/header.html' %}
+		<main class='container'>
+			<div class="task-list">
+				<form method=post class="form">
+					{% csrf_token %}
+					{{ form }}
+					<button type="submit" class="btn btn-primary custom-btn">Save</button>
+				</form>
+			</div>
+		</main>
+		{% include 'globals/footer.html' %}
+	</body>
+</html>

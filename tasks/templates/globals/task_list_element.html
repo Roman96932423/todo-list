@@ -1,0 +1,10 @@
+<div class="task-item">
+	<div>
+		<input type="checkbox" class="task-checkbox" />
+		<span>{{ task.title }}</span>
+	</div>
+	<div class="task-buttons">
+		<a href="{% url 'task-edit' pk=task.pk %}" class="editBtn">Edit</a>
+		<a href="{% url 'task-delete' pk=task.pk %}" class="deleteBtn">Delete</a>
+	</div>
+</div>

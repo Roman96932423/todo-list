@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+	{% include 'globals/head.html' %}
+	<body>
+		{% include 'globals/header.html' %}
+		<main class='container'>
+			<div class="task-list">
+				<form method=post class="form">
+					{% csrf_token %}
+					<p>Delete this task?</p>
+					<button type="submit" class="btn btn-primary custom-btn">Yes</button>
+					<a href="{% url 'main-page' %}" class="btn btn-primary custom-btn">No</a>
+				</form>
+			</div>
+		</main>
+		{% include 'globals/footer.html' %}
+	</body>
+</html>
